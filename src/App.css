@@ -1,0 +1,99 @@
+@media screen and (min-width: 768px) {
+  .App {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  Header {
+    grid-area: header;
+    background-color: #edefee;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+  }
+  .headerNav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-content: center;
+  }
+  main {
+    grid-area: main;
+    padding: 20px;
+    min-height: 90vh;
+  }
+
+  Footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-items: center;
+    align-items: center;
+    background-color: #edefee;
+  }
+}
+
+/* Styles for mobile --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+++++
+++++
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .App {
+    width: 100vw; /* Set width to 100% of viewport width */
+  }
+  Header {
+    grid-area: header;
+    background-color: #edefee;
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 10px;
+    justify-items: center;
+  }
+
+  .headerNav {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+  .headerNav a {
+    padding: 10px;
+  }
+  main {
+    grid-area: main;
+    padding: 20px;
+    min-height: 90vh;
+  }
+  Footer {
+    padding: 10px;
+    justify-items: center;
+    display: grid;
+    background-color: #edefee;
+    text-align: center;
+  }
+  .footerItem {
+    align-items: center;
+    text-align: center;
+  }
+  Footer ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
